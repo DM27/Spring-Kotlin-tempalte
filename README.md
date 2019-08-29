@@ -1,2 +1,2 @@
 # Spring-Kotlin-tempalte
-Template Spring+Kotlin
+Multimodule Spring+Kotlin
