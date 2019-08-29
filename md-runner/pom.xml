@@ -15,6 +15,10 @@
 		<relativePath>..</relativePath>
 	</parent>
 
+	<properties>
+		<frontend.src.dir>${project.parent.basedir}/md-web/app</frontend.src.dir>
+	</properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>ru.dm</groupId>
@@ -22,5 +26,47 @@
 			<version>${project.parent.version}</version>
 		</dependency>
 	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<goals>
+							<goal>repackage</goal>
+						</goals>
+						<configuration>
+							<attach>false</attach>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>3.0.1</version>
+				<executions>
+					<execution>
+						<id>position-react-build</id>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<phase>prepare-package</phase>
+						<configuration>
+							<outputDirectory>${project.basedir}/target/classes/static</outputDirectory>
+							<resources>
+								<resource>
+									<directory>${frontend.src.dir}/build</directory>
+									<filtering>false</filtering>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
 
 </project>

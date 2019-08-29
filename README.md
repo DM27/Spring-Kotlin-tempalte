@@ -1,2 +1,2 @@
 # Spring-Kotlin-tempalte
-Multimodule Spring+Kotlin
+Multimodule Spring+Kotlin+React

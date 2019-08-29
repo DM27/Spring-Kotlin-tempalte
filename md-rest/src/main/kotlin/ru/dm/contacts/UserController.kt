@@ -4,6 +4,7 @@ import org.springframework.web.bind.annotation.*
 import ru.dm.contacts.entity.User
 import ru.dm.contacts.repository.UserRepository
 
+@CrossOrigin("http://localhost:3000")
 @RestController
 class UserController(private var userRepository: UserRepository) {
 

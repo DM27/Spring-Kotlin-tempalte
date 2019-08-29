@@ -29,3 +29,8 @@ md-service-impl/target
 md-rest/target
 md-dao/target
 md-integration-tests/target
+
+# React
+.DS_STORE
+node_modules
+build/

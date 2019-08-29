@@ -25,6 +25,7 @@
 	</properties>
 
 	<modules>
+		<module>md-web</module>
 		<module>md-runner</module>
 		<module>md-dao</module>
 		<module>md-service-api</module>
